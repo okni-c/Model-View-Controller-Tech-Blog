@@ -35,7 +35,12 @@ router.get('/', withAuth, (req, res) => {
   })
     .then(dbPostData => {
       const posts = dbPostData.map(post => post.get({ plain: true }));
-      res.render('dashboard', { posts, loggedIn: true, pageHero: "Dashboard", pageSub: "Create and edit your posts." });
+      res.render('dashboard', { 
+        posts, loggedIn: true,
+        pageHero: "Dashboard",
+        tabTitle: "Dashboard",
+        pageSub: "Create and edit your posts." 
+      });
     })
     .catch(err => {
       console.log(err);
@@ -74,7 +79,9 @@ router.get('/edit/:id', withAuth, (req, res) => {
         res.render('edit-post', {
           post,
           loggedIn: true,
-          pageHero: "Edit Post", pageSub: "Yeah, you probably should change that..."
+          tabTitle: "Edit",
+          pageHero: "Edit Post",
+          pageSub: "Yeah, you probably should change that..."
         });
       } else {
         res.status(404).end();

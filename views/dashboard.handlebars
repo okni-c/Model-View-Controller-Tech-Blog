@@ -13,7 +13,7 @@
           <label for="post-url">URL</label>
         </div>
         <br />
-        <button type="submit" class="btn btn-primary text-uppercase">Create</button>
+        <button type="submit" class="btn btn-outline-success">Create</button>
       </form>
     </div>
   </div>
@@ -26,14 +26,11 @@
     <div class="col-md-10 col-lg-8 col-xl-7">
       <br />
       <h2>Your Posts</h2>
-      <ol>
-        {{#each posts as |post|}}
-        <li>
-          {{> post-info post}}
-          <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-        </li>
-        {{/each}}
-      </ol>
+      {{#each posts as |post|}}
+      {{> post-info post}}
+      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+      <hr class="my-4" />
+      {{/each}}
     </div>
   </div>
 </section>
