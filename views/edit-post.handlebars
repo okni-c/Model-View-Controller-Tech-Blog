@@ -3,6 +3,7 @@
     <div class="col-md-10 col-lg-8 col-xl-7">
       <article>
         <a href="/dashboard"> &larr; Back to dashboard</a>
+        <br /><br />
         <h2>
           Edit Post
         </h2>
@@ -16,22 +17,25 @@
             |
             <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
           </div>
-          <button type="submit">Save post</button>
-          <button type="button" class="delete-post-btn">Delete post</button>
+          <br />
+          <button class="btn btn-outline-success" type="submit">Save post</button>
+          <button class="btn btn-outline-danger delete-post-btn" type="button" >Delete post</button>
         </form>
       </article>
-
+      <br />
       <form class="comment-form">
         <div>
-          <textarea name="comment-body"></textarea>
+          <textarea class="form-control" name="comment-body" placeholder="Type your comment here..."></textarea>
         </div>
-
+        <br />
         <div>
-          <button type="submit">Add a comment</button>
+          <button class="btn btn-outline-primary" type="submit">Add a comment</button>
         </div>
       </form>
+      <br />
 
       {{> comments post.comments}}
+
     </div>
   </div>
 </div>
