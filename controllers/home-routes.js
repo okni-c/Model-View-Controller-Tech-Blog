@@ -102,6 +102,7 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login', {
+    tabTitle: "Login or Signup",
     pageHero: "Login",
     pageSub: "Create an account or login."
   });
