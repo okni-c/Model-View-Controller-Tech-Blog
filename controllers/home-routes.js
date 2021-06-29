@@ -33,7 +33,9 @@ router.get('/', (req, res) => {
 
       res.render('homepage', {
         posts,
-        loggedIn: req.session.loggedIn
+        loggedIn: req.session.loggedIn,
+        pageHero: "Welcome!",
+        pageSub: "Lets hear what you have to say..."
       });
     })
     .catch(err => {
@@ -80,7 +82,9 @@ router.get('/post/:id', (req, res) => {
 
       res.render('single-post', {
         post,
-        loggedIn: req.session.loggedIn
+        loggedIn: req.session.loggedIn,
+        pageHero: "Post #" + dbPostData.id,
+        pageSub: "Created by " + dbPostData.user.username
       });
     })
     .catch(err => {
@@ -95,7 +99,10 @@ router.get('/login', (req, res) => {
     return;
   }
 
-  res.render('login');
+  res.render('login', {
+    pageHero: "Login",
+    pageSub: "Create an account or login."
+  });
 });
 
 module.exports = router;

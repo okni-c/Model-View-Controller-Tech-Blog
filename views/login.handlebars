@@ -1,33 +1,43 @@
-<form class="login-form">
-  <div>
-    <label for="email-login">email:</label>
-    <input type="text" id="email-login" />
-  </div>
-  <div>
-    <label for="password-login">password:</label>
-    <input type="password" id="password-login" />
-  </div>
-  <div>
-    <button type="submit">login</button>
-  </div>
-</form>
+<!-- signup and login form start -->
+<div class="container px-4 px-lg-5">
+  <div class="row gx-4 gx-lg-5 justify-content-center">
+    <div class="col-md-10 col-lg-8 col-xl-7">
+      <p>Quick! Get logged in! You are missing new posts!</p>
+      <div class="my-5">
+        <form class="login-form">
+          <div class="form-floating">
+            <input class="form-control" type="text" id="email-login" placeholder=" " />
+            <label for="email-login">Email</label>
+          </div>
+          <div class="form-floating">
+            <input class="form-control" type="password" id="password-login" placeholder=" " />
+            <label for="password-login">Password</label>
+          </div>
+          <br />
+          <div>
+            <button class="btn btn-primary text-uppercase" type="submit">Login</button>
+          </div>
+        </form>
+        <br /><br />
 
-<form class="signup-form">
-  <div>
-    <label for="username-signup">username:</label>
-    <input type="text" id="username-signup" />
-  </div>
-  <div>
-    <label for="email-signup">email:</label>
-    <input type="text" id="email-signup" />
-  </div>
-  <div>
-    <label for="password-signup">password:</label>
-    <input type="password" id="password-signup" />
-  </div>
-  <div>
-    <button type="submit">signup</button>
-  </div>
-</form>
+        <form class="signup-form">
+          <div class="form-floating">
+            <input class="form-control" id="username-signup" type="text" placeholder=" " />
+            <label for="username-signup">Username</label>
+          </div>
+          <div class="form-floating">
+            <input class="form-control" type="text" id="email-signup" placeholder=" " />
+            <label for="email-signup">Email</label>
+          </div>
+          <div class="form-floating">
+            <input class="form-control" type="password" id="password-signup" placeholder=" " />
+            <label for="password-signup">Password</label>
+          </div>
+          <br />
+          <div>
+            <button class="btn btn-primary text-uppercase" type="submit">Signup</button>
+          </div>
+        </form>
 
-<script src="/javascript/login.js"></script>
+        <script src="/javascript/login.js"></script>
+        <!-- signup and login form end -->
